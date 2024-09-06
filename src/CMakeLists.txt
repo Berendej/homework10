@@ -27,10 +27,11 @@ add_executable( bulk_client bulk_client.cpp client_connection.cpp )
 
 # package part which enables
 # run: cmake --build . --target package
-# install(TARGETS bulk_server RUNTIME DESTINATION bin)
-# set(CPACK_GENERATOR DEB)
-# set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
-# set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
-# set(CPACK_PACKAGE_VERSION_PATCH "${PATCH_VERSION}")
-# set(CPACK_PACKAGE_CONTACT berrendej@gmail.com)
-# include(CPack)
+install(TARGETS bulk_server RUNTIME DESTINATION bin)
+install(TARGETS bulk_client RUNTIME DESTINATION bin)
+set(CPACK_GENERATOR DEB)
+set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
+set(CPACK_PACKAGE_VERSION_PATCH "${PATCH_VERSION}")
+set(CPACK_PACKAGE_CONTACT berrendej@gmail.com)
+include(CPack)
