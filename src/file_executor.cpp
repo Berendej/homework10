@@ -3,7 +3,7 @@
 #include <iostream> // for debug remove in release
 #include "file_executor.h"
 
-cmd_list_t file_executor_c::s_command_queue;
+cmd_vector_t file_executor_c::s_command_queue;
 std::mutex   file_executor_c::s_mutex;
 std::condition_variable file_executor_c::s_cond_var;
 

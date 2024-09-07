@@ -9,10 +9,10 @@
 
 class server_connection_c : public std::enable_shared_from_this<server_connection_c>
 {
-    static cmd_list_t s_common_queue;
+    static cmd_vector_t s_common_queue;
     static std::mutex s_common_queue_mx;
 
-    cmd_list_t m_queue;
+    cmd_vector_t m_queue;
     boost::asio::ip::tcp::socket m_socket;
     boost::asio::streambuf m_buffer;
     std::list<std::string> m_priv_queue; // < keep dynamic commands here

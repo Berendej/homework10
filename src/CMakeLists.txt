@@ -13,8 +13,7 @@ file( COPY ../data/inp3.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR} )
 file( COPY ../data/inp4.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR} )
 file( COPY ../data/inp1_inline.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR} )
 
-add_executable(bulk_server bulk_server.cpp server_connection.cpp service.cpp 
-               executor.cpp console_executor.cpp file_executor.cpp )
+add_executable(bulk_server bulk_server.cpp server_connection.cpp service.cpp  )
 
 add_library( async async.cpp async.h exe_dispatcher.cpp exe_dispatcher.h 
              executor.h executor.cpp console_executor.cpp console_executor.h 

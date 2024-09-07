@@ -5,7 +5,7 @@
 #include "server_connection.h"
 #include "async.h"
 
-cmd_list_t server_connection_c::s_common_queue;
+cmd_vector_t server_connection_c::s_common_queue;
 std::mutex server_connection_c::s_common_queue_mx;
 
 server_connection_c::server_connection_c(boost::asio::ip::tcp::socket sock, int n) : 

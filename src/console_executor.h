@@ -9,7 +9,7 @@
 
 class console_executor_c : public executor_c
 {
-    cmd_list_t              m_command_queue;
+    cmd_vector_t              m_command_queue;
     std::mutex              m_mutex;
     std::condition_variable m_cond_var;
 

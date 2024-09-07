@@ -6,7 +6,7 @@
 
 class file_executor_c : public executor_c
 {
-    static cmd_list_t s_command_queue;
+    static cmd_vector_t s_command_queue;
     static std::mutex   s_mutex;
     static std::condition_variable s_cond_var;
 
